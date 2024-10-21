@@ -1,0 +1,33 @@
+body{
+    background-color: antiquewhite;
+
+}
+.container{
+    height:400px;
+    border:2px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    align-content: center;
+}
+.child1,.child2,.child3,.child4{
+    height:100px;
+    border:1px solid rgba(0, 128, 0, 0.897);
+    width:300px;
+    display: inline-block;
+}
+.child4{
+    background-color: aquamarine;
+}
+.child3{
+    background-color: red;
+}
+.child2{
+    background-color: blueviolet;
+}
+.child1{
+    background-color: azure;
+    flex-basis: 50%;
+}

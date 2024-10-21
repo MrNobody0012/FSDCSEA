@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-nav">
+            <div class="logo">
+                <h1>MyStore</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button type="submit">Search</button>
+            </div>
+            <div class="nav-links">
+                <a href="#">Account</a>
+                <a href="#">Orders</a>
+                <a href="#">Cart</a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Today's Deals</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Sell</a></li>
+                <!-- Add more navigation items as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Banner Image -->
+        <section class="banner">
+            <img src="banner.jpg" alt="Promotional Banner">
+        </section>
+
+        <!-- Product Categories -->
+        <section class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-list">
+                <div class="category-item">Electronics</div>
+                <div class="category-item">Books</div>
+                <div class="category-item">Fashion</div>
+                <div class="category-item">Home</div>
+                <!-- Add more categories as needed -->
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product Title 1</h3>
+                    <p>$29.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product Title 2</h3>
+                    <p>$49.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <!-- Add more footer links as needed -->
+        </div>
+        <p>&copy; 2024 MyStore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

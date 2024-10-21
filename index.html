@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Switch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            justify-content: center;
+            justify-items: center;
+        }
+        .bulb {
+            display: inline-block;
+            margin: 10px;
+        }
+        .bulb img {
+            width: 100px;
+            height: 150px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .bulb-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bulb Switch Control</h1>
+
+    <label for="bulbInput">Enter the number of bulbs:</label>
+    <input type="number" id="bulbInput" min="1" placeholder="Enter a number" />
+    <button onclick="submitBulbs()">Submit</button>
+
+    <div class="bulb-container" id="bulbContainer"></div>
+
+    <script>
+        function submitBulbs() {
+            const bulbCount = parseInt(document.getElementById("bulbInput").value);
+            const bulbContainer = document.getElementById("bulbContainer");
+            bulbContainer.innerHTML = '';  
+            if (isNaN(bulbCount) || bulbCount < 1) {
+                alert("Please enter a valid positive number.");
+                return;
+            }
+            
+            for (let i = 0; i < bulbCount; i++) {
+                const bulbDiv = document.createElement('div');
+                bulbDiv.className = 'bulb';
+                
+                const img = document.createElement('img');
+                img.src = 'https://www.w3schools.com/js/pic_bulboff.gif';
+                img.alt = 'Bulb';
+                img.id = `bulb${i}`;
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `checkbox${i}`;
+                checkbox.checked = false;
+                checkbox.onchange = function() {
+                    toggleBulb(i, checkbox.checked);
+                };
+                
+                const label = document.createElement('label');
+                label.htmlFor = `checkbox${i}`;
+                label.innerText = `Bulb ${i + 1}`;
+                
+                bulbDiv.appendChild(img);
+                bulbDiv.appendChild(label);
+                bulbDiv.appendChild(checkbox);
+                bulbContainer.appendChild(bulbDiv);
+            }
+        }
+
+        function toggleBulb(index, isOn) {
+            const bulb = document.getElementById(`bulb${index}`);
+            if (isOn) {
+                bulb.src = 'https://www.w3schools.com/js/pic_bulbon.gif';  
+            } else {
+                bulb.src = 'https://www.w3schools.com/js/pic_bulboff.gif';  
+            }
+        }
+    </script>
+
+</body>
+</html>
